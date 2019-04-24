@@ -1,0 +1,1 @@
+{"name": "\"Some Girls\"\n", "writers": ["Madonna", "William Orbit", "Klas \u00c5hlund"], "year": "2012\n", "lyrics": "", "url": "https://en.wikipedia.org/wiki/List_of_songs_recorded_by_Madonna"}

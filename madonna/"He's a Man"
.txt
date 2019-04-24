@@ -1,0 +1,1 @@
+{"name": "\"He's a Man\"\n", "writers": ["Madonna", "Patrick Leonard"], "year": "1990\n", "lyrics": "", "url": "https://en.wikipedia.org/wiki/List_of_songs_recorded_by_Madonna"}

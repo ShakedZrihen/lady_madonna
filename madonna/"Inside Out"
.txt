@@ -1,0 +1,1 @@
+{"name": "\"Inside Out\"\n", "writers": ["Madonna", "Jason Evigan", "Sean Douglas", "Evan Bogart", "Mike Dean"], "year": "2015\n", "lyrics": "", "url": "https://en.wikipedia.org/wiki/List_of_songs_recorded_by_Madonna"}
