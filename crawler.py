@@ -54,9 +54,13 @@ def parse_song_content(song_data, url):
         except:
             pass
     try:
-        lyrics = PyLyrics.getLyrics('Madonna', name)
+        lyrics = PyLyrics.getLyrics('Lady Gaga', name)
     except Exception as e:
-        pass
+        try:
+            lyrics = PyLyrics.getLyrics('Lady Gaga', name[:-1])
+        except Exception:
+            pass
+
     return Song(name, writers, year, lyrics, url), name
 
 
@@ -81,8 +85,8 @@ def get_list_of_songs_written_by_madonna():
 
     # parsed_songs = parse_song_list(table_of_songs)
 
-def get_song_recorded_by_madonna():
-    url = 'https://en.wikipedia.org/wiki/List_of_songs_recorded_by_Madonna'
+def get_song_recorded_by(singer):
+    url = f'https://en.wikipedia.org/wiki/List_of_songs_recorded_by_{singer}'
     html_page = download_html(url)
     table = html_page.find('table', class_='plainrowheaders')
     tbody = table.find('tbody')
@@ -99,9 +103,9 @@ def get_song_recorded_by_madonna():
                 except:
                     if type(name) is bs4.element.NavigableString:
                         name_l.append(name)
-            name = [name for name in name_l if len(name) > 2][0]
+            name = [name for name in name_l if len(name) > 2][0].replace('"', '').replace("?", "")
             tds = row.find_all('td')
-            writ = tds[0]
+            writ = tds[1]
             writers_obj = writ.contents
             writers = []
             for writer in writers_obj:
@@ -111,18 +115,18 @@ def get_song_recorded_by_madonna():
                     if type(writer) is bs4.element.NavigableString:
                         writers.append(writer)
             writers = [writer for writer in writers if len(writer) > 2]
-            year = tds[2].text
+            year = tds[3].text
             lyrics = ''
             try:
-                lyrics = PyLyrics.getLyrics('Madonna', name.lower())
+                lyrics = PyLyrics.getLyrics(f'{singer.replace("-", " ")}', name.lower())
             except Exception as e:
                 pass
             song = Song(name, writers, year, lyrics, url)
-            with open(f'./madonna/{song.name}.txt', 'w') as outfile:
+            with open(f'./{singer}/{song.name}.txt', 'w') as outfile:
                 json.dump(song.__dict__, outfile)
         except Exception as e:
             pass
 
 
 if __name__ == '__main__':
-    get_song_recorded_by_madonna()
+    get_song_recorded_by('Lady_Gaga')

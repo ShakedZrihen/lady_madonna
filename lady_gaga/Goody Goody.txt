@@ -1,0 +1,1 @@
+{"name": "Goody Goody", "writers": ["Matty Malneck", "Johnny Mercer"], "year": "2014\n", "lyrics": "", "url": "https://en.wikipedia.org/wiki/List_of_songs_recorded_by_Lady_Gaga"}

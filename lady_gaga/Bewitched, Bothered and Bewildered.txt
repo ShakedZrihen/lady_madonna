@@ -1,0 +1,1 @@
+{"name": "Bewitched, Bothered and Bewildered", "writers": ["Richard Rodgers", "Lorenz Hart"], "year": "2014\n", "lyrics": "", "url": "https://en.wikipedia.org/wiki/List_of_songs_recorded_by_Lady_Gaga"}

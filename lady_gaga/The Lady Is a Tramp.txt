@@ -1,0 +1,1 @@
+{"name": "The Lady Is a Tramp", "writers": ["Richard Rodgers", "Lorenz Hart"], "year": "2016\n", "lyrics": "", "url": "https://en.wikipedia.org/wiki/List_of_songs_recorded_by_Lady_Gaga"}
