@@ -29,7 +29,6 @@ jobs:
         with:
           repository: linear-b/gitstream-github-action
           ref: develop
-          token: ${{ secrets.CI_USER_GIT_TOKEN }}
       - name: Evaluate Rules
         uses: ./
         id: rules-engine
